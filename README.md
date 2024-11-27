@@ -1,5 +1,11 @@
 # Django Recipe Hub
 
+## Video Demo
+
+Click the link below to view the video demo of the Django Recipe Hub project:
+
+[Watch the Demo on Google Drive](https://drive.google.com/file/d/1PxF7wbthBAiTgCskCt-pSSekHdg5Na4j/view?usp=sharing)
+
 A Django web application that allows users to manage their recipes with CRUD (Create, Read, Update, Delete) functionality. It features user authentication to ensure that only logged-in users can add, update, or delete recipes.
 
 ## Features
