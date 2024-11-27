@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block start %}
+
+    <h1>This is index Page</h1>
+
+     <a href="/contact/">
+        Contact
+      </a>
+      |
+      <a href="/about/">
+        About
+      </a>
+
+
+
+
+
+
+   <table class="container">
+    <tr>
+      <th>S. no</th>
+      <th>name</th>
+      <th>age</th>
+    </tr>
+
+    {% for people in peoples%}
+    <tr>
+      <td>{{forloop.counter}}</td>
+      <td>{{people.name}}</td>
+      <td>{{people.age}}</td>
+    </tr>
+   
+    {% endfor %}
+  </table>
+
+   <p>
+    {{text}}
+   </p>
+
+   {% endblock %}

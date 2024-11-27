@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+      {% block start %}
+
+<div class="container mt-5">
+
+    <!-- Form Card -->
+    <form class="col-6 mx-auto card p-4 shadow-sm border-0" style="background: #f9f9f9; border-radius: 10px;" method="post" enctype= "multipart/form-data">
+      {% csrf_token %}
+        <h2 class="text-center mb-4" style="color: #4CAF50;">Update Recipe</h2>
+        <hr class="mb-4" style="border-top: 2px solid #4CAF50; opacity: 0.5;">
+        
+        <!-- Recipe Name -->
+        <div class="mb-3">
+            <label for="receipe_name" class="form-label">Recipe Name</label>
+            <input name="receipe_name"value="{{receipe.receipe_name}}" type="text" class="form-control" id="receipe_name" placeholder="Enter the recipe name" required>
+        </div>
+
+        <!-- Recipe Description -->
+        <div class="mb-3">
+            <label for="receipe_description" class="form-label">Recipe Description</label>
+            <textarea class="form-control"value="" id="receipe_description" rows="4" placeholder="Enter a brief description" name="receipe_description" required>{{receipe.receipe_description}}</textarea>
+        </div>
+
+        <!-- Recipe Image -->
+        <div class="mb-4">
+            <label for="receipe_image" class="form-label">Recipe Image</label>
+            <input type="file" name="receipe_image" class="form-control" id="receipe_image">
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="btn btn-success w-100" style="border-radius: 25px;">Update Recipe</button>
+    </form>
+
+</div>
+
+
+    {% endblock %}
